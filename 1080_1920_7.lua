@@ -167,7 +167,7 @@ end
 --点击“领取”，成功返回 true，失败返回 false
 function clickLingQu(x,y)
 	if isLingQu(x,y) then
-		click2s(x,y)
+		click3s(x,y)
 		return true
 	else
 		nLog("（"..x..", "..y.."）处不是领取")
@@ -179,7 +179,8 @@ end
 --点击”前往“，成功返回 true，失败返回 false
 function clickQianWang(ytmp)
 	for j=1,3 do
-		click4s(929,ytmp)
+		click3s(929,ytmp)
+		mSleep(3000)
 		if not isQianWang(929,ytmp) then
 			return true
 		end
